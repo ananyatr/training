@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+<body class="body-styles" id="body">
+    <header class="header">
+        <div class="header-div-1">
+                <span class="header-main" onclick="openHeaderMain()">
+                    <i class="fa fa-bars header-bars"></i>&nbsp;&nbsp;&nbsp;</span>
+                <span id="header-dropdown" class="header-bars-dropdown">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeHeaderMain()">&times;</a>
+                    <a href="#">Compliance</a>
+                    <a href="#">Assets</a>
+                    <a href="#">Statistics</a>
+                    <a href="#">Tools</a>
+                </span>
+                
+                <span class="header-span-1-1">
+                    <i class="fa fa-tags"></i>&nbsp;&nbsp;&nbsp;Steve Hull - Assets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="header-angle-right" onclick="headerAngleRight()">
+                        <span class="angle-right-img">&gt;</span>
+                        <div id="angle-right-content" class="angle-right-dropdown">
+                            <a href="#">Steve Hull</a>
+                            <a href="#">Matthew Davis</a>
+                            <a href="#">Dennis Larsen</a>
+                            <a href="#">Jazz Serverless</a>
+                            <a href="#">Roy Stone</a>
+                            <a href="#">Pacman</a>
+                            <a href="#">Peter Ross</a>
+                            <a href="#">Marie Daniels</a>
+                            <a href="#">Katherine Wade</a>
+                            <a href="#">Jean Schmidt</a>
+                            <a href="#">Alexander Burns</a>
+                            <a href="#">Vincent Greene</a>
+                        </div>
+                    </span>
+                    &nbsp;
+                </span>
+            </div>
+        <div id="header-div-2">
+            <button class="active-icon default-icon"><i class="fa fa-legal"></i><span>Compliance</span></button>
+            <button class="default-icon"><i class="fa fa-bars"></i><span>Assets</span></button>
+            <button class="default-icon"><i class="fa fa-wrench"></i><span>Tools</span></button>
+            <button class="default-icon"><i class="fa fa-search"></i><span>OmniSearch</span></button>
+        </div>
+        <div>
+            <span class="search">
+                &nbsp;<i class="fa fa-globe"></i>&nbsp;&nbsp;<span> Cloud Domain </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="angle-down" onclick="headerAngleDown()">
+                        <i class="fa fa-angle-down angle-down-img"></i>
+                        <div class="angle-down-content" id="angle-down-content-id">
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                        </div>
+                </span>&nbsp;&nbsp;
+            </span>
+            <span class="user">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hi, Mark &nbsp;
+            </span>
+            <span id="user-icon" onclick="headerUser()">
+            &nbsp;<i class="fa fa-user-circle user-icon-img"></i>
+                  <div class="user-dropdown-content" id="user-icon-div">
+                    <a href="#">Profile</a>
+                    <a href="#">Log Out</a>
+                  </div>
+            </span>      
+        </div>
+    </header>
+    <main class="main-container">
+        <nav class="nav-section" id="nav-section-id">
+            <ul>
+                <li><a href="#">COMPLIANCE</a></li>
+                <li class="active default"><a href="#">Overview</a></li>
+                <li class="default"><a href="#">Vulnerabilities</a></li>
+                <li class="default"><a href="#">Tagging</a></li>
+                <li class="default"><a href="#">Certificates</a></li>
+                <li class="default"><a href="#">Patching</a></li>
+                <li class="default"><a href="#">Issues</a></li>
+                <li class="default"><a href="#">Policy Knowledgebase</a></li>
+            </ul>
+        </nav>
+        <section class="section-main">
+            <div class="overview-div">
+                <b>Overview</b>
+                &nbsp;
+                <span id="bars-menu" class="overview-bars" onclick="overviewBars()">
+                    <i class="fa fa-bars bars-menu-class"></i>
+                    <div class="overview-bars-content" id="overview-bars-content-id">
+                        <a href="#">Overview</a>
+                        <a href="#">Vulnerabilities</a>
+                        <a href="#">Tagging</a>
+                        <a href="#">Certificates</a>
+                        <a href="#">Patching</a>
+                        <a href="#">Issues</a>
+                        <a href="#">Policy Knowledgebase</a>
+                    </div>
+                </span>
+            </div>
+            <div class="section-div-main">
+                <div class="section-div-1">
+                    <h3>Policy List
+                    <span class="section-div-1-span">
+                        <input type="text" name="search" placeholder="Search..">
+                        <button type="button"><i class="fa fa-search"></i></button>
+                        &nbsp;&nbsp;
+                        <a href="images/dog.gif" download="compliance" style="top: 5%;"><i class="fa fa-download colour-crimson"></i></a>
+                    </span></h3>
+                </div>
+                <div class="section-div-2" id="section-div-2-id">
+                    <ul class="nav-ul">
+                        <li style="font-size: 0.8em;">Filter by:</li>
+                        <li class="active-filter default-filter">Security</li>
+                        <li class="default-filter">Governance</li>
+                        <li class="default-filter">All</li>
+                    </ul>
+                    <span class="section-div-2-span">Total of 400 Policies</span>
+                </div>
+                <div>
+                    <table class="table-main">
+                        <tr id="table-header">
+                            <td>Compliance <i class="fa fa-sort"></i></td>
+                            <td>Policy Title <i class="fa fa-sort"></i></td>
+                            <td>Compliance % <i class="fa fa-sort"></i></td>
+                            <td>Severity <i class="fa fa-sort"></i></td>
+                            <td>Last Scan <i class="fa fa-sort"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-triangle colour-tomato"></i></td>
+                            <td>AWS Root User Account Usage</td>
+                            <td>43%</td>
+                            <td><i class="fa fa-circle colour-tomato"></i> Critical</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-triangle colour-tomato"></i></td>
+                            <td>Detect s3 bucket with global delete permission</td>
+                            <td>18%</td>
+                            <td><i class="fa fa-circle colour-tomato"></i> Critical</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-triangle colour-tomato"></i></td>
+                            <td>If a new IAM user with admin rights is added, send...</td>
+                            <td>28%</td>
+                            <td><i class="fa fa-circle colour-tomato"></i> Critical</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-triangle colour-tomato"></i></td>
+                            <td>Determine if cloudfront cdn is in use/td>
+                            <td>43%</td>
+                            <td><i class="fa fa-circle colour-tomato"></i> Critical</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-circle colour-orange"></i></td>
+                            <td>Unencrypted cloudfront to origin server connection</td>
+                            <td>54%</td>
+                            <td><i class="fa fa-circle colour-orange"></i> High</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-circle colour-orange"></i></td>
+                            <td>AWS Classic in use</td>
+                            <td>74%</td>
+                            <td><i class="fa fa-circle colour-orange"></i> High</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-circle colour-orange"></i></td>
+                            <td>EBS snapshots should be taken frequently</td>
+                            <td>90%</td>
+                            <td><i class="fa fa-circle colour-orange"></i> High</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-circle colour-orange"></i></td>
+                            <td>VPC egress elb</td>
+                            <td>61%</td>
+                            <td><i class="fa fa-circle colour-orange"></i> High</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-exclamation-circle colour-orange"></i></td>
+                            <td>Unencrypted cloudfront to origin server connection</td>
+                            <td>54%</td>
+                            <td><i class="fa fa-circle colour-orange"></i> High</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle colour-green"></i></td>
+                            <td>S3 bucket has global acl permissions enabled</td>
+                            <td>100%</td>
+                            <td><i class="fa fa-circle colour-green"></i> Low</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle colour-green"></i></td>
+                            <td>Detect ELB poodle vulnerability</td>
+                            <td>100%</td>
+                            <td><i class="fa fa-circle colour-green"></i> Low</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle colour-green"></i></td>
+                            <td>Global Accesible administrative ports</td>
+                            <td>100%</td>
+                            <td><i class="fa fa-circle colour-green"></i> Low</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle colour-green"></i></td>
+                            <td>NACL with global inbound and outbound access</td>
+                            <td>100%</td>
+                            <td><i class="fa fa-circle colour-green"></i> Low</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-check-circle colour-green"></i></td>
+                            <td>Global Accesible administrative ports</td>
+                            <td>100%</td>
+                            <td><i class="fa fa-circle colour-green"></i> Low</td>
+                            <td>08-18-2017</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="text-align: center;">
+                    View More&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                </div>
+            </div>
+        </section>
+        <aside class="aside-main">
+            <div  id="div-1">
+            <div>
+                <h3 class="aside-main-headings aside-main-top">Overall Compliance</h3>
+                <img src="images/Graph1.PNG" alt="Overall Compliance Graph" class="graph-image"/>
+            </div>  
+            <div class="aside-2">
+                <h3 class="aside-main-headings">PacMan Issues&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></h3>
+                <div class="aside-pacman" style="padding-bottom:4%; padding-top:5%;">
+                    <div class="aside-pacman-text-1"><span class="aside-pacman-text-1-span">2000</span> Total Issues &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="aside-pacman-span-span">/</span></div>
+                    <div class="aside-pacman-text-2"><span class="aside-pacman-text-2-span">20</span> Critical</div>
+                </div>
+                <div class="aside-pacman">
+                    <div class="aside-pacman-progress-1"></div>
+                    <div class="aside-pacman-progress-2"></div>
+                </div>
+                <div class="aside-pacman-text">
+                    Security <span> 48% </span> / Governance <span> 52% </span>
+                </div>    
+            </div>
+            </div>
+            <div id="div-2">
+            <div class="box">
+                <div class="aside-subbox">
+                        <h3 class="aside-main-headings">Vulnerability&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></h3>
+                        <img src="images/icon1-1.png" alt="Vulnerability">
+                        <div>Vulnerabilities</div>
+                        <div>across 200 hosts</div>
+                </div>
+                <div>
+                        <h3 class="aside-main-headings">Tagging&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></h3>
+                        <img src="images/icon2-2.png" alt="Tagging">
+                        <div>Untagged</div>
+                        <div>out of 300 instances</div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="aside-subbox">
+                        <h3 class="aside-main-headings">Certificates&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></h3>
+                        <img src="images/icon3-3.png" alt="Certificates">
+                        <div>Expiring</div>
+                        <div>out of 50 certificates</div>
+                </div>
+                <div>
+                        <h3 class="aside-main-headings">Patching&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></h3>
+                        <img src="images/icon4-4.png" alt="Patching">
+                        <div>Unpatched</div>
+                        <div>out of 300 instances</div>
+                </div>
+            </div>
+            </div>
+        </aside>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
